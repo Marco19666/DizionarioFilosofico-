@@ -18,8 +18,8 @@
 - [x] Ricerca testuale e filtro per area culturale
 - [x] Pagine di dettaglio per le prime schede autore
 - [x] Prime relazioni tra voci
-- [ ] Estendere i contenuti a concetti, opere, scuole, tradizioni e periodi
-- [ ] Filtri avanzati e ricerca multilingue
+- [x] Inserire le prime schede dimostrative di concetti filosofici\n- [ ] Estendere i contenuti a opere, scuole, tradizioni e periodi
+- [x] Filtro per tipologia di voce\n- [ ] Filtri avanzati e ricerca multilingue
 
 ## Milestone 4 — Strumenti comparativi
 - [ ] Cronologie parallele
