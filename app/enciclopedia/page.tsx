@@ -5,18 +5,21 @@ import { useMemo, useState } from "react";
 import { entries } from "@/data/entries";
 
 const areas = ["Tutte le aree", ...Array.from(new Set(entries.map((entry) => entry.area)))];
+const kinds = ["Tutte le tipologie", ...Array.from(new Set(entries.map((entry) => entry.kind)))];
 
 export default function EncyclopediaPage() {
   const [query, setQuery] = useState("");
   const [area, setArea] = useState("Tutte le aree");
+  const [kind, setKind] = useState("Tutte le tipologie");
   const filtered = useMemo(() => {
     const q = query.trim().toLocaleLowerCase("it");
     return entries.filter((entry) => {
       const matchesArea = area === "Tutte le aree" || entry.area === area;
+      const matchesKind = kind === "Tutte le tipologie" || entry.kind === kind;
       const searchable = [entry.id, entry.title, entry.subtitle, entry.area, entry.period, entry.summary, ...entry.tags].join(" ").toLocaleLowerCase("it");
-      return matchesArea && (!q || searchable.includes(q));
+      return matchesArea && matchesKind && (!q || searchable.includes(q));
     });
-  }, [query, area]);
+  }, [query, area, kind]);
 
   return (
     <main className="archive-page">
