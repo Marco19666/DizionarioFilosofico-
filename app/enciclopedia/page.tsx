@@ -38,6 +38,8 @@ export default function EncyclopediaPage() {
           <input id="archive-search" type="search" placeholder="Es. etica, Cina, metafisica…" value={query} onChange={(event) => setQuery(event.target.value)} />
           <label className="filter-label" htmlFor="archive-area">Area culturale</label>
           <select id="archive-area" value={area} onChange={(event) => setArea(event.target.value)}>{areas.map((item) => <option key={item}>{item}</option>)}</select>
+          <label className="filter-label" htmlFor="archive-kind">Tipologia di voce</label>
+          <select id="archive-kind" value={kind} onChange={(event) => setKind(event.target.value)}>{kinds.map((item) => <option key={item}>{item}</option>)}</select>
         </div>
         {filtered.length ? <div className="entry-grid">{filtered.map((entry) => (
           <Link className="entry-card archive-card" href={`/enciclopedia/${entry.slug}`} key={entry.id}>
