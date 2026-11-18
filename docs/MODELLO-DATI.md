@@ -27,3 +27,6 @@ Ogni scheda possiede:
 - app/enciclopedia/page.tsx: archivio con ricerca e filtro.
 - app/enciclopedia/[slug]/page.tsx: pagina di dettaglio generata staticamente.
 - I codici identificativi sono stabili; gli slug servono solo alla navigazione.
+
+## Prima estensione concettuale
+Sono state inserite sei schede dimostrative di concetti: Dao, Logos, Dharma, Śūnyatā, Essere e Virtù. Sono state redatte come lemmi contestualizzati, non come definizioni universali. I collegamenti tra concetti e autori indicano rapporti tematici o testuali descritti nella scheda, non automaticamente influenze storiche.
